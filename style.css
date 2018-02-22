@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    overflow-y: hidden;
+}
+table {
+    width: 100%;
+}
+textarea {
+    width: 500px;
+    height: calc(100vh - 20px*2);
+}
+.floatL {
+    float: left;
+    margin: 20px;
+}
+.note {
+    text-align: center;
+    border-radius: 5px;
+}
+.n0 {
+    visibility: hidden;
+    max-width: 0px;
+}
+.n1 {
+    background-color: #b62208;
+}
+.n2 {
+    background-color: #e5e374;
+}
+.n3 {
+    background-color: #1f8e32;
+}
+.n4 {
+    background-color: #eba975;
+}
+.n5 {
+    background-color: #24a6e4;
+}
+.n6 {
+    background-color: #a26ad9;
+}
+.n7 {
+    background-color: #cfeffb;
+}
+.d1 {
+    height: 204.8px;
+}
+.d2 {
+    height: 102.4px;
+}
+.d3 {
+    height: 51.2px;
+}
+.d4 {
+    height: 25.6px;
+}
+.d5 {
+    height: 12.8px;
+}
+.d6 {
+    height: 6.4px;
+}
+.d7 {
+    height: 3.2px;
+}
