@@ -21,18 +21,24 @@ function parseABCToArr(string) {
     })
 }
 
-function generateTableWithNotes(notes, table, keys) {
+function generateTableWithNotes(notes, table, keys, colors) {
     keys = keys || 15;
     if (!table) {
         table = document.body.appendChild(document.createElement('table'));
     }
     HTMLTableGenerator(Math.ceil(window._totalCountNotes), keys, table)
         .then(table => {
+            let cc = Number(colors && colors.length - 1);
             notes.forEach((element, i) => {
                 const field = table.rows[i].cells[Math.min(element.note + (7*tone2keyPart(element.tone, keys)), keys)]
                 field.innerHTML = element.tone;
                 field.className = `n${element.note} note`;
                 field.parentElement.className = `d${element.part}`;
+                if (colors) {
+                    cc = (cc > 7)? 0: cc;
+                    colors && (field.style.backgroundColor = colors[cc]);
+                    cc++;
+                }
             });
         });
 }
