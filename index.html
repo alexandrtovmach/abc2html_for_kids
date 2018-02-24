@@ -68,8 +68,8 @@
             </label>
             <button onclick="play(true, event)">PLAY</button>
         </div>
-    
-        <table></table>
+
+        <div id="Player"></div>
     </div>
     
 
@@ -88,8 +88,13 @@
             }
         }
         function render() {
-            var abcString = document.getElementsByTagName('textarea')[0].value;    
-            generateTableWithNotes(parseABCToArr(abcString), document.getElementsByTagName('table')[0], 15, ['#aaa', '#cab', '#abb', '#aaa', '#cab', '#abb', '#3a3'])
+            var abcString = document.getElementsByTagName('textarea')[0].value;
+            generateTableWithNotes(
+                parseABCToArr(abcString),
+                15,
+                ['#aaa', '#cab', '#abb', '#aaa', '#cab', '#abb', '#3a3'],
+                document.getElementById('Player')
+            )
         }
         render();
     </script>

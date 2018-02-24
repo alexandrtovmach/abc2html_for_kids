@@ -21,11 +21,10 @@ function parseABCToArr(string) {
     })
 }
 
-function generateTableWithNotes(notes, table, keys, colors) {
+function generateTableWithNotes(notes, keys, colors, container) {
     keys = keys || 15;
-    if (!table) {
-        table = document.body.appendChild(document.createElement('table'));
-    }
+    table = (container || document.body).appendChild(document.createElement('table'));
+    
     HTMLTableGenerator(Math.ceil(window._totalCountNotes), keys, table)
         .then(table => {
             let cc = Number(colors && colors.length - 1);
